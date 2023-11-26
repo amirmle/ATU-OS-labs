@@ -1,0 +1,1 @@
+pip list --outdated --format=json| jq '.[]| .name ' | awk '{system("pip install -U "$1)} '
